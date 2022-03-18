@@ -33,6 +33,15 @@ class SLL {
     }
     return false;
   }
+  length() {
+    let currentNode = this.head;
+    let count = 0;
+    while (currentNode) {
+      count++;
+      currentNode = currentNode.next;
+    }
+    return count;
+  }
   view() {
     let currentNode = this.head;
 
@@ -43,5 +52,5 @@ class SLL {
     }
   }
 }
-mySLL = new SLL().addFront(1).addFront(2).addFront(3).contains(2);
+mySLL = new SLL().addFront(1).addFront(2).addFront(3).addFront(4).length();
 console.log(mySLL);

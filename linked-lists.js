@@ -23,7 +23,16 @@ class SLL {
   front() {
     return `El valor al frente es ${this.head.value}`;
   }
-
+  contains(value) {
+    let currentNode = this.head;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return true;
+      }
+      currentNode = currentNode.next;
+    }
+    return false;
+  }
   view() {
     let currentNode = this.head;
 
@@ -34,5 +43,5 @@ class SLL {
     }
   }
 }
-mySLL = new SLL().addFront(1).addFront(2).addFront(3).removefront().front();
+mySLL = new SLL().addFront(1).addFront(2).addFront(3).contains(2);
 console.log(mySLL);

@@ -51,6 +51,39 @@ class SLL {
     }
     return list;
   }
+  max() {
+    let currentNode = this.head;
+    let max = currentNode.value;
+    while (currentNode) {
+      if (max < currentNode.value) {
+        max = currentNode.value;
+      }
+      currentNode = currentNode.next;
+    }
+    return max;
+  }
+  min() {
+    let currentNode = this.head;
+    let min = currentNode.value;
+    while (currentNode) {
+      if (min > currentNode.value) {
+        min = currentNode.value;
+      }
+      currentNode = currentNode.next;
+    }
+    return min;
+  }
+  average() {
+    let currentNode = this.head;
+    let suma = 0;
+    let count = 0;
+    while (currentNode) {
+      suma += currentNode.value;
+      count++;
+      currentNode = currentNode.next;
+    }
+    return suma / count;
+  }
   view() {
     let currentNode = this.head;
 
@@ -61,5 +94,12 @@ class SLL {
     }
   }
 }
-mySLL = new SLL().addFront(1).addFront(2).addFront(3).addFront(4).display();
+mySLL = new SLL()
+  .addFront(3)
+  .addFront(3)
+  .addFront(3)
+  .addFront(3)
+  .addFront(3)
+  .addFront(3)
+  .average();
 console.log(mySLL);

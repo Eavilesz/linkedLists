@@ -3,8 +3,8 @@ kind: Component
 metadata:
   annotations:
     backstage.io/techdocs-ref: dir:.
-  name: Linked List
-  description: Linked list description
+  name: linked-list
+  description: linked-list-description
   tags:
     - java
     - data
